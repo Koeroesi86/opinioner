@@ -1,0 +1,49 @@
+<form class="related-post" *ngIf="relation" [formGroup]="form">
+    <div *ngIf="relation.id" class="pull-right form-group">
+        <button type="button" class="btn btn-warning" (click)="saveRelation()">
+            <i class="fa fa-refresh"></i>
+            Update connection
+        </button>
+        <button type="button" class="btn btn-danger" (click)="deleteRelation()">
+            <i class="fa fa-trash-o"></i>
+            Delete connection
+        </button>
+    </div>
+    <h4 class="related-title" title="Title" *ngIf="relation.post">
+        <strong>Post title:</strong>
+        <a class="related-link" target="_blank"
+           [href]="relation.post.uri + (relation.post.post_type == 'attachment' ? '?view=page' : '')"
+           title="Click to open in new tab">
+            {{relation.post.title}}
+        </a>
+    </h4>
+
+    <div class="form-group">
+        <label [for]="'related_position_' + id">Position</label>
+        <input type="text" [id]="'related_position_' + id" formControlName="position" placeholder="Enter the position of the connection" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <!--TODO: better way-->
+        <label [for]="'related_order_' + id">Order</label>
+        <input type="number" step="1" [id]="'related_order_' + id" formControlName="order" placeholder="Enter the order of the connection" class="form-control"/>
+    </div>
+
+    <input type="hidden" formControlName="id" *ngIf="relation.id"/>
+
+    <div *ngIf="!relation.id" class="form-group">
+        <label [for]="'related_uri_a_' + id">URI to attach</label>
+        <input type="text" [id]="'related_uri_a_' + id" formControlName="uri_a" class="form-control"/>
+    </div>
+
+    <div *ngIf="!relation.id" class="form-group">
+        <label [for]="'related_uri_b_' + id">Target</label>
+        <input type="text" [id]="'related_uri_b_' + id" formControlName="uri_b" class="form-control"/>
+    </div>
+    <div *ngIf="!relation.id" class="form-group text-right">
+        <button type="button" class="btn btn-success btn-block" (click)="saveRelation()">
+            <i class="fa fa-plus"></i>
+            Add connection
+        </button>
+    </div>
+</form>

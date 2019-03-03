@@ -1,0 +1,26 @@
+<h3>Globals</h3>
+
+<div class="card">
+    <div class="card-header">Settings</div>
+    <div class="card-body related-holder">
+        <os-loading *ngIf="!settings"></os-loading>
+        <div *ngIf="settings">
+            <os-option (save)="settingsSave($event)"></os-option>
+            <os-option *ngFor="let option of settings" [option]="option" (save)="settingsSave($event)"></os-option>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">Attached posts</div>
+    <div class="card-body related-holder">
+        <os-loading *ngIf="!relatedPosts"></os-loading>
+        <div *ngIf="relatedPosts">
+            <os-post-relation [targetURI]="''"></os-post-relation>
+            <os-post-relation *ngFor="let relatedPost of relatedPosts" [relation]="relatedPost"></os-post-relation>
+            <p *ngIf="relatedPosts.length == 0">
+                Nothing is attached globally so far.
+            </p>
+        </div>
+    </div>
+</div>

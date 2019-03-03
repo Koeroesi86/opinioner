@@ -1,0 +1,14 @@
+web:
+  build: .
+  links:
+    - "database:database"
+  volumes:
+    - ./:/src
+    - ./.docker/000-default.conf:/etc/apache2/sites-available/000-default.conf
+  ports:
+    - "8080:80"
+
+database:
+  image: mysql:5.7
+  environment:
+    MYSQL_ROOT_PASSWORD: test

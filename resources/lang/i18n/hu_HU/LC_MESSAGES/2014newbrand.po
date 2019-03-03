@@ -1,0 +1,174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OnlineSolutions\n"
+"POT-Creation-Date: 2016-11-20 13:50+0000\n"
+"PO-Revision-Date: 2016-11-20 13:51+0000\n"
+"Last-Translator: Kőrösi Krisztián <info@korosikrisztian.hu>\n"
+"Language-Team: Kőrösi Krisztián <info@korosikrisztian.hu>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-Basepath: ../../../../../app\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../resources/views/page/templates/2014newbrand\n"
+"X-Poedit-SearchPath-1: ../storage/framework/2014newbrand\n"
+
+#: ../storage/framework/2014newbrand/1ca4019f0376812234e0c6644485bf59875090fc.php.php:14
+msgid "sent to: "
+msgstr "elküldve ide:"
+
+#: ../storage/framework/2014newbrand/236c42de2f86e5e19dd2ac3829b0536e8e109212.php.php:4
+msgid "Comment"
+msgstr "Komment"
+
+#: ../storage/framework/2014newbrand/236c42de2f86e5e19dd2ac3829b0536e8e109212.php.php:6
+msgid "Logged in as:"
+msgstr "Bejelentkezve mint:"
+
+#: ../storage/framework/2014newbrand/236c42de2f86e5e19dd2ac3829b0536e8e109212.php.php:9
+msgid "Log out of this account"
+msgstr "Kijelentkezés ebből a fiókból"
+
+#: ../storage/framework/2014newbrand/236c42de2f86e5e19dd2ac3829b0536e8e109212.php.php:19
+#: ../storage/framework/2014newbrand/a1d8db51e50035493cb53f54f60212c69a435815.php.php:22
+msgid "Send"
+msgstr "Küldés"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:8
+#: ../storage/framework/2014newbrand/6fcabbc1ce405d0a1e600d4485a6c2193c871965.php.php:32
+msgid "Register"
+msgstr "Regisztráció"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:25
+msgid "Name"
+msgstr "Név"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:27
+msgid "John Doe"
+msgstr ""
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:32
+msgid "Email Address"
+msgstr "Email:"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:34
+msgid "awesome@awesome.com"
+msgstr ""
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:39
+#: ../storage/framework/2014newbrand/6fcabbc1ce405d0a1e600d4485a6c2193c871965.php.php:10
+msgid "Password"
+msgstr "Jelszó"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:46
+#: ../storage/framework/2014newbrand/8d0be5e990eedc6ab4641210ef580277ec20fa89.php.php:22
+msgid "Confirm Password"
+msgstr "Jelszó megerősítése"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:52
+msgid "Submit"
+msgstr "Küldés"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:55
+#: ../storage/framework/2014newbrand/6fcabbc1ce405d0a1e600d4485a6c2193c871965.php.php:24
+#: ../storage/framework/2014newbrand/8d0be5e990eedc6ab4641210ef580277ec20fa89.php.php:28
+#: ../storage/framework/2014newbrand/c9944c0029bffbe66d7455a49f097b282e974465.php.php:7
+#: ../storage/framework/2014newbrand/d017d32f9544b991cb25fc5c14e0edb881b3b7d7.php.php:8
+msgid "Login"
+msgstr "Bejelentkezés"
+
+#: ../storage/framework/2014newbrand/2cba6e415cc7d8fe327c4b100d0765d436711f8d.php.php:58
+#: ../storage/framework/2014newbrand/6fcabbc1ce405d0a1e600d4485a6c2193c871965.php.php:29
+msgid "Forgotten password"
+msgstr "Elfelejtett jelszó"
+
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:30
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:251
+#: ../storage/framework/2014newbrand/8e156be429d17a489d041d05e153dbf6f1afbbb6.php.php:99
+#: ../storage/framework/2014newbrand/8e156be429d17a489d041d05e153dbf6f1afbbb6.php.php:100
+#: ../storage/framework/2014newbrand/8e156be429d17a489d041d05e153dbf6f1afbbb6.php.php:118
+#: ../storage/framework/2014newbrand/8e156be429d17a489d041d05e153dbf6f1afbbb6.php.php:123
+msgid "Search"
+msgstr "Keresés"
+
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:30
+msgid " results"
+msgstr " eredmények"
+
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:53
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:156
+#: ../storage/framework/2014newbrand/45826a529b75eeb2f02798f61dd1cf88b727b67a.php.php:39
+msgid "%Y. %B. %d."
+msgstr ""
+
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:239
+msgid "I cannot find anything"
+msgstr "Nem találtam semmit"
+
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:244
+msgid ""
+"Sorry, but you're looking for something what is not exists here. You can try "
+"again your search:"
+msgstr ""
+"Sajnálom, de keres valamit, ami nem létezik itt. Megpróbálhatod más keresési "
+"feltételekkel:"
+
+#: ../storage/framework/2014newbrand/30636a290d82e3645417c6f21fe2fe456d42fced.php.php:250
+#: ../storage/framework/2014newbrand/8e156be429d17a489d041d05e153dbf6f1afbbb6.php.php:122
+msgid "Search keywords"
+msgstr "Keresés"
+
+#: ../storage/framework/2014newbrand/6fcabbc1ce405d0a1e600d4485a6c2193c871965.php.php:4
+#: ../storage/framework/2014newbrand/a1d8db51e50035493cb53f54f60212c69a435815.php.php:16
+msgid "Email address"
+msgstr "E-mail cím"
+
+#: ../storage/framework/2014newbrand/6fcabbc1ce405d0a1e600d4485a6c2193c871965.php.php:19
+msgid "Stay signed in"
+msgstr "Maradjon bejelentkezve"
+
+#: ../storage/framework/2014newbrand/8d0be5e990eedc6ab4641210ef580277ec20fa89.php.php:16
+msgid "New Password"
+msgstr "Új jelszó"
+
+#: ../storage/framework/2014newbrand/8e156be429d17a489d041d05e153dbf6f1afbbb6.php.php:97
+msgid "Reset"
+msgstr "Újra"
+
+#: ../storage/framework/2014newbrand/a5b87727886c59de72aaac4e91cb5f7722d04c5e.php.php:17
+msgid "Unfortunately the page you've specified does not exists:"
+msgstr "Sajnos az oldal amit keresel nem létezik:"
+
+#: ../storage/framework/2014newbrand/c9944c0029bffbe66d7455a49f097b282e974465.php.php:13
+#, php-format
+msgid "Welcome, %s"
+msgstr "Üdv, %s"
+
+#: ../storage/framework/2014newbrand/c9944c0029bffbe66d7455a49f097b282e974465.php.php:17
+msgid "Change password"
+msgstr "Jelszó megváltoztatása"
+
+#: ../storage/framework/2014newbrand/c9944c0029bffbe66d7455a49f097b282e974465.php.php:20
+msgid "Logout"
+msgstr "Kilépés"
+
+#~ msgid "Welcome, "
+#~ msgstr "Üdv, "
+
+#~ msgid "Verify your email address"
+#~ msgstr "E-mail megerősítés"
+
+#~ msgid "Change Password"
+#~ msgstr "Jelszó változtatás"
+
+#~ msgid "Forgotten Password"
+#~ msgstr "Elfelejtett jelszó"
+
+#~ msgid "No user with e-mail: "
+#~ msgstr "Nem található felhasználó ezzel az e-mail címmel:"
+
+#~ msgid "Page does not exists"
+#~ msgstr "Nincs ilyen oldal."

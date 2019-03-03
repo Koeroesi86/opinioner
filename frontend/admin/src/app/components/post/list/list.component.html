@@ -1,0 +1,21 @@
+<h3>Posts</h3>
+<div class="card post-list">
+    <os-loading *ngIf="!posts"></os-loading>
+    <div *ngIf="posts" class="post-listing">
+        <pagination-controls (pageChange)="p = $event" responsive="true" autoHide="true"></pagination-controls>
+        <div *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: p }" class="post">
+            {{ post.title }}
+            <div class="pull-right">
+                <a target="_blank" [href]="post.uri">
+                    <i class="fa fa-eye"></i>&nbsp;
+                    Show
+                </a>
+                <a target="_blank" [href]="'/admin/post/edit?from=' + post.uri">
+                    <i class="fa fa-pencil"></i>&nbsp;
+                    Edit
+                </a>
+            </div>
+        </div>
+        <pagination-controls (pageChange)="p = $event" responsive="true" autoHide="true"></pagination-controls>
+    </div>
+</div>

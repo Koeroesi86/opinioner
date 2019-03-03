@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OnlineSolutions\n"
+"POT-Creation-Date: 2016-11-20 13:30+0000\n"
+"PO-Revision-Date: 2016-11-20 13:30+0000\n"
+"Last-Translator: Kőrösi Krisztián <info@korosikrisztian.hu>\n"
+"Language-Team: Kőrösi Krisztián <info@korosikrisztian.hu>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-Basepath: ../../../../../app\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: app/Http/Controllers/Auth/AuthController.php:74
+msgid "Login"
+msgstr ""
+
+#: app/Http/Controllers/Auth/AuthController.php:161
+msgid "Register"
+msgstr ""
+
+#: app/Http/Controllers/Auth/AuthController.php:211
+msgid "Verify your email address"
+msgstr ""
+
+#: app/Http/Controllers/Auth/AuthController.php:276
+msgid "Change Password"
+msgstr ""
+
+#: app/Http/Controllers/Auth/AuthController.php:299
+#: app/Http/Controllers/Auth/AuthController.php:325
+msgid "Forgotten Password"
+msgstr ""
+
+#: app/Http/Controllers/Auth/AuthController.php:326
+msgid "No user with e-mail: "
+msgstr ""
+
+#: app/Http/Controllers/Auth/AuthController.php:357
+msgid "Forgotten password"
+msgstr ""
+
+#: app/Http/Controllers/PageController.php:94
+msgid "Page does not exists"
+msgstr ""

@@ -1,0 +1,73 @@
+<div class="card">
+    <div class="card-header">New post</div>
+    <div class="card-body">
+        <div class="loading-spinner-holder" *ngIf="!fromPost && app.fromUri != undefined">
+            <div class="loading-spinner">
+                <img src="/os-admin/dist/assets/ajax-loader.gif" class="load-image"/>
+                {{ "Loading..." }}
+            </div>
+        </div>
+        <form class="post-edit" [formGroup]="form" *ngIf="fromPost || app.fromUri == undefined">
+            <div class="form-group">
+                <label for="post_title">{{ "Post title" }}</label>
+                <input type="text" id="post_title" formControlName="title" (blur)="titleBlur($event)" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="post_uri">{{ "Post URI" }}</label>
+                <input type="text" id="post_uri" formControlName="uri" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="post_description">{{ "Post description" }}</label>
+                <input type="text" id="post_description" formControlName="description" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="post_keywords">{{ "Post keywords" }}</label>
+                <input type="text" id="post_keywords" formControlName="keywords" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="post_excerpt">{{ "Post excerpt" }}</label>
+                <textarea name="excerpt" id="post_excerpt" formControlName="excerpt" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="post_body">{{ "Post body" }}</label>
+                <textarea name="body" id="post_body" formControlName="body" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="post_post_type">{{ "Post type" }}</label>
+                <input type="text" id="post_post_type" formControlName="post_type" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="post_access_level">{{ "Access level" }}</label>
+                <input type="number" id="post_access_level" formControlName="access_level" class="form-control"/>
+            </div>
+        </form>
+        <form [formGroup]="relationForm" *ngIf="fromPost">
+            <div class="checkbox">
+                <label for="post_related">
+                    <input type="checkbox" id="post_related" formControlName="has"/>
+                    Create relation to current, with position:
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="post_related_position" placeholder="Enter relation position here" formControlName="position" class="form-control"/>
+            </div>
+
+        </form>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-block {{ status }}" (click)="savePost($event)" [disabled]="form.invalid || (relationForm.value.has && relationForm.invalid)">
+                <i class="fa fa-plus"></i>
+                {{ "Add Post" }}
+            </button>
+        </div>
+
+        <os-upload (onUploadError)="onUploadError($event)" (onUploadSuccess)="onUploadSuccess($event)"></os-upload>
+    </div>
+</div>

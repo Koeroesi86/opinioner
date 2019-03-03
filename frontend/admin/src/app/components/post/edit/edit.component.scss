@@ -1,0 +1,61 @@
+.post-edit-container {
+  .list {
+    max-height: 100%;
+    vertical-align: top;
+    overflow-y: auto;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        .indicator {
+          display: none;
+          font-size: 80%;
+          margin-left: 20px;
+        }
+        .version-controls {
+          float: right;
+          clear: right;
+          button {
+            width: auto;
+            display: inline-block;
+            margin-left: 6px;
+            padding: 0 6px;
+          }
+        }
+        &.current-version {
+          font-weight: 600;
+          .indicator {
+            display: inline-block;
+          }
+          .version-controls {
+            display: none;
+          }
+        }
+        &::before {
+          content: '\b7';
+          display: inline-block;
+          width: 20px;
+          text-align: center;
+          font-weight: 900;
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 0;
+          clear: both;;
+        }
+        &.no-bullet {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}

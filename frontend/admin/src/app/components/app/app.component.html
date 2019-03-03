@@ -1,0 +1,19 @@
+<section [ngClass]="{ 'admin-overlay': true, 'menu-hidden': !showAdminMenu }">
+    <div class="content">
+        <h2>
+            <a class="back" [href]="(fromUri ? fromUri : '/')" title="back to page">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </a>
+            {{ title }}
+            <span [hidden]="pageTitle == ''">&nbsp;-&nbsp;{{ pageTitle }}</span>
+        </h2>
+
+        <div class="menu">
+            <os-menu [routes]="router.config" [currentPath]="''" [fromUri]="fromUri"></os-menu>
+        </div>
+        <div class="holder">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="message-holder" [ngClass]="{'visible' : message.length > 0}">{{ message }}</div>
+    </div>
+</section>

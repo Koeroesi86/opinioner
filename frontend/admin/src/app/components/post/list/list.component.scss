@@ -1,0 +1,22 @@
+.post-list {
+  a {
+    color: #1a1a1a;
+    transition: all .2s ease-in-out;
+    margin-left: 20px;
+    &:hover {
+      color: #2F2F2F;
+    }
+  }
+
+  .post-listing {
+    padding: 20px 0;
+
+    pagination-controls {
+      text-align: center;
+    }
+  }
+
+  .post {
+    padding: 0 20px;
+  }
+}

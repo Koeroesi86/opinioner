@@ -1,0 +1,17 @@
+<div class="menu-item">
+    <a href="javascript:void(0);" (click)="app.toggleMenu($event)" *ngIf="parent">
+        <span class="menu-icon">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </span>
+        <span class="menu-text">{{ "Toggle menu" }}</span>
+    </a>
+</div>
+<div *ngFor="let menuPoint of menuPoints" class="menu-item" [ngClass]="{ 'active' : isActive(menuPoint) }">
+    <a [routerLink]="[getMenuLink(menuPoint)]" [queryParams]="queryParams" [class]="menuPoint.data.styleClass"
+       routerLinkActive="selected" [ngClass]="{parent: menuPoint.children}">
+        <span *ngIf="menuPoint.data.icon" [innerHTML]="menuPoint.data.icon | escapeHtml" class="menu-icon"></span>
+        <span class="menu-text">{{ menuPoint.data.title}}</span>
+    </a>
+    <os-menu [routes]="menuPoint.children" *ngIf="menuPoint.children" [currentPath]="getMenuLink(menuPoint)"
+             [fromUri]="fromUri" [parent]="false" class="sub-menu"></os-menu>
+</div>

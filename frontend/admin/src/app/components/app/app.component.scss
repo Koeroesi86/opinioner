@@ -1,0 +1,52 @@
+
+$color_baltic_sea_approx: #2c2c31;
+$black_40: rgba(0, 0, 0, 0.4);
+$color_celeste_approx: #ccc;
+$color_ship_gray_approx: #3a3b44;
+$white: #fff;
+
+.menu-hidden {
+  .menu {
+    width: 40px;
+    a .menu-text {
+      display: none;
+    }
+  }
+  .holder {
+    width: calc(100% - 40px);
+  }
+}
+.menu {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: calc(100% - 50px);
+  padding: 0 0 20px 0;
+  background: $color_baltic_sea_approx;
+  z-index: 2;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all .2s ease;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 6px $black_40;
+  .fa {
+    position: relative;
+    top: -1px;
+    margin-right: 6px;
+    font-size: 12px;
+    width: 12px;
+    display: inline-block;
+  }
+}
+.holder {
+  float: left;
+  width: calc(100% - 200px);
+  height: calc(100% - 50px);
+  padding: 20px 30px;
+  overflow: auto;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: width .2s ease;
+}

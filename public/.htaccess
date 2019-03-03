@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Hotlinking protection
+
+    #allow with no referrers
+    RewriteCond %{HTTP_REFERER} !^$
+
+    RewriteCond %{HTTP_REFERER} !^http(s)?://((www|dev)\.)?f1info.hu [NC]
+    RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?facebook.com [NC]
+    #list or extensions to protect
+    RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|pdf)$ [NC]
+    
+    #prevent redirect cycle
+    RewriteCond %{QUERY_STRING} !(^|&)view=page(&|$) [NC]
+    RewriteRule ^(.*)$ /$1\?view=page [L,R=301]
+
+    # Redirect Trailing Slashes...
+    #RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

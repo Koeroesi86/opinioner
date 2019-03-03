@@ -1,0 +1,109 @@
+<div class="row post-edit-container">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header"><a [href]="!fromPost ? '/' : fromPost.uri" target="_blank">Edit post</a>
+            </div>
+            <div class="card-body">
+                <os-loading *ngIf="!fromPost"></os-loading>
+                <div class="current">
+                    <form class="post-edit" [formGroup]="form" *ngIf="fromPost">
+                        <input type="hidden" formControlName="id"/>
+
+                        <div class="form-group">
+                            <label for="post_title">{{ "Post title" }}</label>
+                            <input type="text" id="post_title" formControlName="title" (blur)="titleBlur($event)" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post_uri">{{ "Post URI" }}</label>
+                            <input type="text" id="post_uri" formControlName="uri" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post_description">{{ "Post description" }}</label>
+                            <input type="text" id="post_description" formControlName="description" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post_keywords">{{ "Post keywords" }}</label>
+                            <input type="text" id="post_keywords" formControlName="keywords" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post_excerpt">{{ "Post excerpt" }}</label>
+                            <textarea name="excerpt" id="post_excerpt" formControlName="excerpt"
+                                      class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post_body">{{ "Post body" }}</label>
+                            <textarea name="body" id="post_body" formControlName="body" class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post_post_type">{{ "Post type" }}</label>
+                            <input type="text" id="post_post_type" formControlName="post_type" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post_access_level">{{ "Access level" }}</label>
+                            <input type="number" id="post_access_level" formControlName="access_level"
+                                   class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-block {{ status }}" (click)="savePost($event)" [disabled]="form.invalid">
+                                <i class="fa fa-plus"></i>
+                                {{ "Add version" }}
+                            </button>
+                        </div>
+                    </form>
+
+                    <os-upload (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></os-upload>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card list" *ngIf="versions && fromPost">
+            <div class="card-header">Versions</div>
+            <div class="card-body">
+                <div class="">
+                    <ul>
+                        <li *ngFor="let version of versions" [ngClass]="{ 'current-version': fromPost.id == version.id }">
+                            [{{ version.id }}]
+                            {{ version.title }}
+                            <span class="indicator">current</span>
+                            <div class="version-controls">
+                                <button (click)="setFromPost(version)" class="btn btn-default"><i
+                                        class="fa fa-pencil"></i>
+                                </button>
+                                <button (click)="removeVersion(version)" class="btn btn-warning"><i
+                                        class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="no-bullet">
+                            <p class="text-warning small">Use with caution</p>
+                            <button class="btn btn-danger btn-block" (click)="deleteAll()">Delete all versions</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card" *ngIf="relatedPosts && fromPost">
+            <div class="card-header">Attached posts</div>
+            <div class="card-body related-holder">
+                <os-post-relation [targetURI]="fromPost.uri" (onSave)="refreshRelations()"></os-post-relation>
+                <os-post-relation *ngFor="let relatedPost of relatedPosts" [relation]="relatedPost" (onSave)="refreshRelations()" (onDelete)="refreshRelations()"></os-post-relation>
+                <p *ngIf="relatedPosts.length == 0">
+                    Nothing is attached to this post so far.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

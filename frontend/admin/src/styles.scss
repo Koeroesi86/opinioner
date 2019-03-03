@@ -1,0 +1,422 @@
+//colors
+$color_trendy_green_40_approx: rgba(134, 133, 32, 0.4);
+$color_trendy_green_10_approx: rgba(134, 133, 32, 0.1);
+$white_80: rgba(255, 255, 255, 0.8);
+$black_80: rgba(0, 0, 0, 0.8);
+$color_silver_chalice_approx: #aaa;
+$gallery: #efefef;
+$color_storm_dust_approx: #666;
+$color_mine_shaft_approx: #333;
+$color_celeste_approx: #ccc;
+$color_cararra_approx: #ebebeb;
+$color_baltic_sea_approx: #2c2c31;
+$black_40: rgba(0, 0, 0, 0.4);
+$color_ship_gray_approx: #3a3b44;
+$white: #fff;
+$black_20: rgba(0, 0, 0, 0.2);
+$black_16: rgba(0, 0, 0, 0.16);
+$black: #000;
+$color_dove_gray_approx: #6f6f6f;
+$color_mountain_mist_approx: #999;
+$color_copper_rust_80_approx: rgba(161, 76, 76, 0.8);
+$color_copper_rust_40_approx: rgba(161, 76, 76, 0.4);
+$color_forest_green_40_approx: rgba(32, 134, 32, 0.4);
+$color_forest_green_80_approx: rgba(32, 134, 32, 0.8);
+$color_silver_approx: #bfbfbf;
+$color_gallery_approx: #eee;
+$green_20: rgba(0, 255, 0, 0.2);
+
+$OpenSansFontPath: "/os-admin/dist/assets/fonts/open-sans-all";
+@import '~open-sans-all/scss/open-sans';
+$fa-font-path: "/os-admin/node_modules/font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+@import "~bootstrap/scss/bootstrap.scss";
+
+//@extend-elements
+//original selectors
+//#admin-panel, .admin-panel
+%extend_1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  z-index: 999;
+  padding: 0 20px;
+  text-align: left;
+  background: $white_80;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 10px $black_80;
+}
+
+//original selectors
+//#admin-panel button, .admin-panel .btn
+%extend_2 {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border: 1px solid $color_silver_chalice_approx;
+  background: $gallery;
+  color: $color_storm_dust_approx;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all ease-in-out 0.1s;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+//original selectors
+//#admin-panel button:hover, #admin-panel button:active, #admin-panel button:focus, .admin-panel .btn:hover, .admin-panel .btn:active, .admin-panel .btn:focus
+%extend_3 {
+  border-color: $color_mine_shaft_approx;
+  background: $color_celeste_approx;
+  color: $color_mine_shaft_approx;
+}
+
+//original selectors
+//.admin-overlay input, .admin-overlay textarea, .admin-overlay select, .admin-overlay button, .admin-overlay .btn
+%extend_4 {
+  max-width: 100%;
+  margin-bottom: 10px;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all ease-in-out 0.2s;
+  &:disabled {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+//original selectors
+//.admin-overlay input, .admin-overlay textarea, .admin-overlay select
+%extend_5 {
+  border: 1px solid $color_celeste_approx;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+//original selectors
+//.admin-overlay button, .admin-overlay .btn
+%extend_6 {
+  line-height: 35px;
+  height: 35px;
+  padding: 0;
+  font-size: 14px;
+  color: $color_dove_gray_approx;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid $color_celeste_approx;
+  text-align: center;
+  cursor: pointer;
+}
+
+//original selectors
+//.admin-overlay input:hover, .admin-overlay input:active, .admin-overlay input:focus, .admin-overlay select:hover, .admin-overlay select:active, .admin-overlay select:focus, .admin-overlay textarea:hover, .admin-overlay textarea:active, .admin-overlay textarea:focus, .admin-overlay button:hover, .admin-overlay button:active, .admin-overlay button:focus, .admin-overlay .btn:hover, .admin-overlay .btn:active, .admin-overlay .btn:focus
+%extend_7 {
+  border-color: $black;
+  color: $black;
+  outline: 0;
+}
+
+//original selectors
+//.admin-overlay .global-holder, .admin-overlay .related-holder, .admin-overlay .post-edit-container
+%extend_9 {
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+}
+
+//original selectors
+//.admin-overlay form.related-post::after, .admin-overlay form.global-post::after
+%extend_11 {
+  content: "";
+  display: block;
+  clear: both;
+  position: relative;
+  width: 100%;
+}
+
+#admin-panel {
+  @extend %extend_1;
+  .text {
+    margin-right: 15px;
+    font-size: 14px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+.admin-panel {
+  @extend %extend_1;
+  .text {
+    margin-right: 15px;
+    font-size: 14px;
+  }
+  .btn {
+    @extend %extend_2;
+    &:hover {
+      @extend %extend_3;
+    }
+    &:active {
+      @extend %extend_3;
+    }
+    &:focus {
+      @extend %extend_3;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', trebuchet ms, arial, helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-control, .btn {
+  border-radius: 0;
+  max-width: 100%;
+}
+
+.checkbox {
+  input[type="checkbox"] {
+    margin-top: 14px;
+  }
+}
+
+.admin-overlay {
+  position: relative;
+  line-height: 40px;
+  text-align: left;
+  background: $white_80;
+  min-height: 100vh;
+  .content-panel {
+    position: relative;
+    background: $white;
+    padding: 20px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 4px $black_20;
+  }
+  h2 {
+    position: relative;
+    padding: 0 20px;
+    margin: 0;
+    line-height: 50px;
+    height: 50px;
+    color: $color_storm_dust_approx;
+    font-weight: 100;
+    background: $white;
+    z-index: 3;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 2px 5px $black_16;
+    a {
+      color: $black;
+      margin-right: 12px;
+      font-size: 18px;
+    }
+  }
+  h3 {
+    padding: 0;
+    margin: 20px 0;
+  }
+  form {
+    position: relative;
+    margin: 0 auto;
+    color: $color_mine_shaft_approx;
+    &.related-post::after {
+      @extend %extend_11;
+    }
+    &.global-post::after {
+      @extend %extend_11;
+    }
+  }
+  button {
+    &.processing {
+      border-color: $color_trendy_green_40_approx;
+      animation-name: processing;
+      animation-duration: 0.6s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    &.fail {
+      border-color: $color_copper_rust_80_approx;
+      background-color: $color_copper_rust_40_approx;
+    }
+    &.done {
+      background-color: $color_forest_green_40_approx;
+      border-color: $color_forest_green_80_approx;
+    }
+    .fa {
+      //margin-right: 6px;
+    }
+  }
+  .btn {
+    @extend %extend_4;
+    @extend %extend_6;
+    &:hover {
+      @extend %extend_7;
+    }
+    &:active {
+      @extend %extend_7;
+    }
+    &:focus {
+      @extend %extend_7;
+    }
+  }
+  .message-holder {
+    position: absolute;
+    top: 60px;
+    right: 25px;
+    display: none;
+    width: calc(100% - 250px);
+    line-height: 30px;
+    background: $white_80;
+    padding: 0 12px;
+    color: $color_mine_shaft_approx;
+    text-align: left;
+    font-size: 12px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 1px 1px 3px $black_20;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    &.visible {
+      display: block;
+    }
+  }
+  .dropZone {
+    position: relative;
+    margin-top: 30px;
+    width: auto;
+    height: 200px;
+    background: $gallery;
+    border: 5px dashed $color_celeste_approx;
+    &.dz-drag-hover {
+      border-color: $color_silver_approx;
+      background: $color_gallery_approx;
+    }
+    .dz-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .dz-upload[data-dz-uploadprogress] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $green_20;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: width 0.05s linear;
+      }
+    }
+    .dz-details {
+      display: none;
+    }
+    .dz-success-mark {
+      display: none;
+    }
+    .dz-error-mark {
+      display: none;
+    }
+    .dz-error-message {
+      display: none;
+    }
+    &.dz-clickable form {
+      display: none;
+    }
+  }
+  .dropZone::after {
+    content: "Drop file here";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .ui-autocomplete {
+    z-index: 100;
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid $color_celeste_approx;
+    border-top-color: $color_gallery_approx;
+    margin-top: -1px;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color_cararra_approx;
+  }
+  .ui-menu .ui-menu-item {
+    padding: 0 5px;
+    line-height: 25px;
+    font-size: 12px;
+    &.ui-state-focus {
+      border: 0;
+      background: $color_celeste_approx;
+      line-height: 25px;
+      margin: 0;
+    }
+  }
+  .loading-spinner {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    .load-image {
+      display: block;
+      margin: 6px auto 20px auto;
+      clear: both;
+    }
+  }
+  .ng2-pagination {
+    text-align: center;
+  }
+}
+
+@-moz-keyframes processing {
+  0% {
+    background: $color_trendy_green_40_approx;
+  }
+  50% {
+    background: $color_trendy_green_10_approx;
+  }
+  100% {
+    background: $color_trendy_green_40_approx;
+  }
+}
+
+@-webkit-keyframes processing {
+  0% {
+    background: $color_trendy_green_40_approx;
+  }
+  50% {
+    background: $color_trendy_green_10_approx;
+  }
+  100% {
+    background: $color_trendy_green_40_approx;
+  }
+}
+
+@keyframes processing {
+  0% {
+    background: $color_trendy_green_40_approx;
+  }
+  50% {
+    background: $color_trendy_green_10_approx;
+  }
+  100% {
+    background: $color_trendy_green_40_approx;
+  }
+}

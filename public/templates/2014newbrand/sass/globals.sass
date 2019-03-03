@@ -1,0 +1,210 @@
+/* Header and wrapper
+
+#wrapperBackground
+  background: url($template_url + 'images/bg15.png') top left repeat
+
+#wrapper
+  margin: 0 auto
+  width: 990px
+  height: auto
+  text-align: left
+  padding: 0 0 20px 0
+  position: relative
+  background: #333333
+  box-shadow: 0 0 10px #000
+  border-radius: 10px
+
+#header
+  padding: 0
+  margin: auto
+  height: 50px
+  width: 990px
+  text-align: left
+  position: relative
+
+div.headerbg
+  width: 100%
+  height: 50px
+  background: #000000 url($template_url + 'images/panel4.png') top left repeat-x
+  text-align: center
+  position: fixed
+  top: 0
+  z-index: 100
+  border-bottom: 1px solid #535353
+
+#header
+  #topright
+    text-align: left
+    width: 820px
+    margin: 0
+  h1
+    padding: 0
+    margin: 0
+    a
+      color: #fff
+      font-size: 17pt
+      text-decoration: none
+      &:hover
+        color: #eee
+        text-decoration: none
+
+/* Menu
+
+#catnav
+  margin: 0
+  padding: 0
+  height: auto
+  width: auto
+
+#nav
+  list-style: none
+  margin: 0
+  padding: 0
+  ul
+    list-style: none
+    float: left
+    padding: 0
+    margin: 0
+    height: auto
+    width: auto
+  li
+    margin: 0
+    padding: 0
+    background: transparent
+    overflow: visible
+    display: inline-block
+    line-height: 18px
+    float: left
+    a
+      color: #cccccc
+      font-size: 11pt
+      display: block
+      margin: 8px 5px 0 0
+      padding: 8px 10px
+      background: transparent
+      &:hover
+        color: #ffffff
+        text-decoration: none
+        display: block
+        background: transparent
+    li
+      border: 0
+      transform: none
+      a
+        /* submenu
+        color: #ccc
+        font-size: 10pt
+        padding: 5px
+        text-shadow: none
+        border-right: 1px solid #4b4b4d
+        border-left: 1px solid #4b4b4d
+      &:last-child a
+        border-bottom: 1px solid #4b4b4d
+        border-bottom-left-radius: 6px
+        border-bottom-right-radius: 6px
+      a, ul
+        transform: none
+  > li
+    > a
+      color: #cccccc
+      display: block
+      margin: 10px 5px 10px 0
+      padding: 8px 12px
+      line-height: 14px
+      -webkit-transform: skew(-15deg)
+      -moz-transform: skew(-15deg)
+      -o-transform: skew(-15deg)
+      &:hover
+        color: #efc500
+        background: #000000
+        background: -moz-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4B4B4B), color-stop(50%, #3D3D3D), color-stop(51%, #1D1D1D), color-stop(100%, #1D1D1D))
+        background: -webkit-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+        background: -o-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+        background: -ms-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+        background: linear-gradient(to bottom, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 8px rgba(255, 255, 255, 0.3) inset
+        border-radius: 5px
+    &:hover > a, &.sfhover > a
+      color: #efc500
+      background: #000000
+      background: -moz-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4B4B4B), color-stop(50%, #3D3D3D), color-stop(51%, #1D1D1D), color-stop(100%, #1D1D1D))
+      background: -webkit-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+      background: -o-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+      background: -ms-linear-gradient(top, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+      background: linear-gradient(to bottom, #4B4B4B 0%, #3D3D3D 50%, #1D1D1D 51%, #1D1D1D 100%)
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 8px rgba(255, 255, 255, 0.3) inset
+      border-radius: 5px
+    > a .menuLinkBefore
+      display: block
+      transform: skew(15deg)
+
+.sidebarbox.mobile-navigation, #nav_mobile, #nav_mobile_toggle
+  display: none
+
+#header
+  #logo
+    float: left
+    padding: 0
+    text-align: right
+    a
+      display: block
+      border-right: 0 solid #cccccc
+      height: 50px
+
+#nav
+  li
+    ul
+      list-style: none
+      position: absolute
+      display: none
+      width: 120px
+      left: auto
+      margin-left: -10px
+      z-index: 10
+      text-shadow: none
+      background: #262626
+      border-bottom-left-radius: 6px
+      border-bottom-right-radius: 6px
+      ul
+        left: 158px
+        top: 0
+        border: 0
+        li
+          background: #333
+    li
+      float: left
+      margin: 0
+      padding: 0
+      width: 100%
+      &.HasChild > a
+        background: transparent url($template_url + 'images/proceed.png') 100% 50% no-repeat
+        &:hover
+          background: #121212 url($template_url + 'images/proceed.png') 100% 50% no-repeat
+      a
+        height: 24px
+        line-height: 24px
+        text-align: left
+        text-indent: 0
+        margin: 0
+        padding: 5px 20px 5px 15px
+        &:hover
+          background: #121212
+          padding: 5px 20px 5px 15px
+      &.sfhover > a
+        background: #121212
+        padding: 5px 20px 5px 15px
+    &:hover, &.sfhover
+      /* prevents IE7 drop-down menu bug (focus on a page element prevents nested menus from disappearing)
+      position: relative
+  > li
+    &:hover > ul, &.sfhover > ul
+      left: auto
+
+#toprss
+  float: right
+  display: inline
+  width: 65px
+  line-height: 35px
+  text-align: right
